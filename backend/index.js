@@ -33,10 +33,9 @@ form.addEventListener('submit', (e) => {
     if (total != 100 ){
         messages.push('The four textboxes must add up to exactly 100','Your total is:', total,'No of days active is' ,active_days)
     }
-    // prevent data  submission if there is any error
+    // prevent data submission if there is any error
     if (messages.length > 0){
      e.preventDefault()
      errorElement.innerText = messages. join(', ')
     }
-
 })
