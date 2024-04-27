@@ -39,7 +39,9 @@
       <div class="container-fluid my-3">
         <div class="row justify-content-center row-cols-sm-1 ">
             <!-- left side the days-->
+         
             <div class="col-sm-2"> 
+              <h6 class="display-6 tt"  data-bs-placement="right" title="Show per week allocation"> Weeks Active</h6>
              <form id="days-act-inact">
                 <div class="form-check form-switch">
                     <label for="monday-tog" class="form-check-label">Monday</label>
@@ -104,10 +106,10 @@
                     <label for="amt">Amount</label>
                   </div>
                   <!-- toggle switch for radios-->
-                  <input type="radio" class="btn-check" name="options" id="week" autocomplete="off" checked>
+                  <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per week allocation" name="options" id="week" autocomplete="off" checked>
                   <label class="btn btn-outline-secondary" for="week">Week</label>
 
-                  <input type="radio" class="btn-check" name="options" id="day" autocomplete="off">
+                  <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per day allocation" name="options" id="day" autocomplete="off">
                   <label class="btn btn-outline-secondary" for="day">Day</label>
                   <h6 class='display-6'> Output</h6>
                   <div class="form-floating mb-3 ">
@@ -130,7 +132,7 @@
                     <label for="needs">Needs</label>
                   </div>
                   <!-- The clear button for the fields-->
-                  <button type="button" class="btn btn-secondary btn-sm px-3" onclick="clearfield()">Clear</button>
+                  <button type="button" class="btn btn-secondary btn-sm px-3 tt" data-bs-placement="top" title="Clear the outputs" onclick="clearfield()">Clear</button>
 
             </div>
             </div>
@@ -163,7 +165,7 @@
           </div>
             <!-- Update button-->
           <div class="row g-2 justify-content-center row-cols-1 my-2">
-              <button id="update_but" class="btn btn-dark btn-lg btn-block tt" data-bs-placement="top" title="Something" onclick="updateChart(); Submit()">Update
+              <button id="update_but" class="btn btn-dark btn-lg btn-block tt" data-bs-placement="top" title="Update the Output values" onclick="updateChart(); Submit()">Update
 
               </button>
             </div>
