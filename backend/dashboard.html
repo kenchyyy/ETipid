@@ -210,11 +210,14 @@
         
 
         function updateChart(){
-          chartId.data.datasets[0].data[0] = emergency.value 
-          chartId.data.datasets[0].data[1] = savings.value
-          chartId.data.datasets[0].data[2] = wants.value  
-          chartId.data.datasets[0].data[3] = needs.value 
-          chartId.update()
+          var total = Number(emergency.value) + Number(savings.value) + Number(wants.value) + Number(needs.value)
+          if(total === 100){
+            chartId.data.datasets[0].data[0] = emergency.value 
+            chartId.data.datasets[0].data[1] = savings.value
+            chartId.data.datasets[0].data[2] = wants.value  
+            chartId.data.datasets[0].data[3] = needs.value 
+            chartId.update()
+          }
 
         }
         
