@@ -153,4 +153,6 @@ function compute_emergency_per_day(read_data){
   return e_p_d
 }
 //add remaining computations etc here
+
+pwede ni natun ma computan karun sang toggle switch if interested
 */
