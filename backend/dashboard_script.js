@@ -45,44 +45,46 @@ function readfromLocal(data_entered){
 // insert the data into a value
 function insert(read_data){
   //not actual values do the computations first and call this function so they run sucessively
-  document.getElementById('emergency').value = read_data[1]
-  document.getElementById('savings').value = read_data[2]
-  document.getElementById('wants').value = read_data[3]
-  document.getElementById('needs').value = read_data[4]
+  var c_s = compute_savings(read_data)
+  var c_e = compute_emergency(read_data)
+  var c_n = compute_needs(read_data)
+  var c_w = compute_wants(read_data)
+  document.getElementById('emergency').value = c_e.toString()
+  document.getElementById('savings').value = c_s.toString()
+  document.getElementById('wants').value = c_w.toString()
+  document.getElementById('needs').value = c_n.toString()
   //call made methods here
-  compute_savings(read_data)
-  compute_emergency(read_data)
-  compute_needs(read_data)
-  compute_wants(read_data)
-
 }
+
 
 
 //checkboxes function
 
 // computation functions 
-var amt = read_data[0]
 
 function compute_savings(read_data){
-  // amt = read_data[0]
+  amt = read_data[0]
   PSavings = parseInt(read_data[2]) / 100
   Savings_week = amt * PSavings
   return Savings_week
 }
 
 function compute_needs(read_data){
+  amt = read_data[0]
   PNeeds = parseInt(read_data[4]) / 100
   Needs_week = amt * PNeeds
   return Needs_week
 }
 
 function compute_wants(read_data){
+  amt = read_data[0]
   PWants = parseInt(read_data[3]) / 100
   Wants_week = amt * PWants
   return Wants_week
 }
 
 function compute_emergency(read_data){
+  amt = read_data[0]
   PEmergency = parseInt(read_data[1]) / 100
   Emergency_week = amt * PEmergency
   return Emergency_week
