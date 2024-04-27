@@ -1,4 +1,7 @@
 function Submit(){
+//active days, newly added by Clyde
+  var active_days = get_n_set_active()
+  console.log(active_days)
   var data_entered = retrieveData()
   console.log(data_entered)
   var read_data = readfromLocal(data_entered)
@@ -59,6 +62,22 @@ function insert(read_data){
 
 
 //checkboxes function
+
+let gitact_day;
+// returns how many days are toggled on as well as adding the active days on the localstorage
+function get_n_set_active(){
+  let days = [];
+  
+  document.querySelectorAll('[type="checkbox"]').forEach(item => {
+    if (item.checked === true) {
+      days.push(item.value);
+    }
+  })
+  var act = days.length
+  var a_day = localStorage.setItem("Active_days", act)
+  gitact_day = localStorage.getItem("Active_days", a_day)
+  return act
+}
 
 // computation functions 
 
