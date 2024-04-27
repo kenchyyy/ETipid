@@ -163,7 +163,7 @@
           </div>
             <!-- Update button-->
           <div class="row g-2 justify-content-center row-cols-1 my-2">
-              <button id="update_but" class="btn btn-dark btn-lg btn-block" onclick="updateChart(); Submit()">Update
+              <button id="update_but" class="btn btn-dark btn-lg btn-block tt" data-bs-placement="top" title="Something" onclick="updateChart(); Submit()">Update
 
               </button>
             </div>
@@ -200,7 +200,7 @@
         )
 
         //js funct
-        const amtsss = document.getElementById('amt')
+
         const emergency = document.getElementById('emergency_value')
         const savings = document.getElementById('savings_value')
         const wants = document.getElementById('wants_value')
@@ -210,25 +210,19 @@
         
 
         function updateChart(){
-          var total = Number(emergency.value) + Number(savings.value) + Number(wants.value) + Number(needs.value)    
-          var list_of_inputs = [amtsss.value, emergency.value, savings.value, wants.value, needs.value]
-          if(total === 100 && handle_nega(list_of_inputs)){
-            chartId.data.datasets[0].data[0] = emergency.value 
-            chartId.data.datasets[0].data[1] = savings.value
-            chartId.data.datasets[0].data[2] = wants.value  
-            chartId.data.datasets[0].data[3] = needs.value 
-            chartId.update()
-          }
-        }
-        function handle_nega(arraguy){
-          var is_all_number_positive = true
-          for(i = 0; i <= 4; i++){
-            if (Number(arraguy[i]) < 0){
-              is_all_number_positive = false
-          return is_all_number_positive
-        }}}
-        
+          chartId.data.datasets[0].data[0] = emergency.value 
+          chartId.data.datasets[0].data[1] = savings.value
+          chartId.data.datasets[0].data[2] = wants.value  
+          chartId.data.datasets[0].data[3] = needs.value 
+          chartId.update()
 
+        }
+        
+// TOOL TIP HANDLING
+ const tooltips = document.querySelectorAll('.tt')
+ tooltips.forEach(t => {
+  new bootstrap.Tooltip(t)
+ })
 
       </script>
 </body>
