@@ -89,10 +89,12 @@ function compute_savings(read_data, actday){
     var PSavings = parseInt(read_data[2]) / 100
     Savings_week = (amt * PSavings) / actday
   
+  } else {
+    alert("You must be active for at least 1 day")
   }
   // raise error
   
-  return Savings_week
+  return Savings_week.toFixed(2)
 }
 
 function compute_needs(read_data, actday){
@@ -102,7 +104,7 @@ function compute_needs(read_data, actday){
   Needs_week = (amt * PNeeds)/ actday
 }
   
-  return Needs_week
+  return Needs_week.toFixed(2)
 }
 
 function compute_wants(read_data, actday){
@@ -111,7 +113,7 @@ function compute_wants(read_data, actday){
   var PWants = parseInt(read_data[3]) / 100
   Wants_week = (amt * PWants)/ actday
 }
-  return Wants_week
+  return Wants_week.toFixed(2)
 }
 
 function compute_emergency(read_data, actday){
@@ -120,7 +122,7 @@ function compute_emergency(read_data, actday){
   var PEmergency = parseInt(read_data[1]) / 100
   Emergency_week = (amt * PEmergency)/ actday
 }
-  return Emergency_week
+  return Emergency_week.toFixed(2)
 }
 
 /*
