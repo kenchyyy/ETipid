@@ -83,33 +83,58 @@ function get_n_set_active(){
 
 function compute_savings(read_data){
   amt = read_data[0]
-  PSavings = parseInt(read_data[2]) / 100
+  var PSavings = parseInt(read_data[2]) / 100
   Savings_week = amt * PSavings
   return Savings_week
 }
 
 function compute_needs(read_data){
   amt = read_data[0]
-  PNeeds = parseInt(read_data[4]) / 100
+  var PNeeds = parseInt(read_data[4]) / 100
   Needs_week = amt * PNeeds
   return Needs_week
 }
 
 function compute_wants(read_data){
   amt = read_data[0]
-  PWants = parseInt(read_data[3]) / 100
+  var PWants = parseInt(read_data[3]) / 100
   Wants_week = amt * PWants
   return Wants_week
 }
 
 function compute_emergency(read_data){
   amt = read_data[0]
-  PEmergency = parseInt(read_data[1]) / 100
+  var PEmergency = parseInt(read_data[1]) / 100
   Emergency_week = amt * PEmergency
   return Emergency_week
 }
 
-function compute_per_day(){
-  
+function compute_per_day(read_data){
+  amt = read_data[0]
+  var budget_per_day = amt / active_days
+}
+
+function compute_need_per_day(read_data){
+  amt = read_data[0]
+  n_p_d = budget_per_day * PNeeds
+  return n_p_d
+}
+
+function compute_savings_per_day(read_data){
+  amt = read_data[0]
+  s_p_d = budget_per_day * PSavings
+  return s_p_d
+}
+
+function compute_wants_per_day(read_data){
+  amt = read_data[0]
+  w_p_d = budget_per_day * PWants
+  return w_p_d
+}
+
+function compute_emergency_per_day(read_data){
+  amt = read_data[0]
+  e_p_d = budget_per_day * PEmergency
+  return e_p_d
 }
 //add remaining computations etc here
