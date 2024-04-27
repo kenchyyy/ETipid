@@ -123,7 +123,7 @@ function compute_needs(read_data, actday){
   if (actday > 0){
   var PNeeds = parseInt(read_data[4]) / 100
   Needs_day = (amt * PNeeds)/ actdaDy
-  return Needs_day
+  return Needs_day.toFixed(2)
 }
   
   
@@ -134,7 +134,7 @@ function compute_wants(read_data, actday){
   if (actday > 0){
   var PWants = parseInt(read_data[3]) / 100
   Wants_day = (amt * PWants)/ actday
-  return Wants_day
+  return Wants_day.toFixed(2)
 }
   
 }
