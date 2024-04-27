@@ -6,7 +6,10 @@ function Submit(){
   var data_entered = retrieveData()
   console.log(data_entered)
   if(Number(data_entered[1]) + Number(data_entered[2]) + Number(data_entered[3]) + Number(data_entered[4]) !== 100){
-    window.alert("The total of the four Inputs must be 100")}
+    const toastContent = document.getElementById("add_up_to")
+    const toast = new  bootstrap.Toast(toastContent)
+    toast.show() 
+  }
   else if(handle_negative_input(data_entered) === false){
     window.alert("Negative values are not alowed")}
   else{
@@ -83,7 +86,9 @@ function insert(read_data, actday,toggle){
   if (toggle == 'day'){
     if(actday < 1)
     {
-      alert("You must be active for at least 1 day!")
+      const toastContent = document.getElementById("one_act_day")
+      const toast = new  bootstrap.Toast(toastContent)
+      toast.show()
     }
   document.getElementById('emergency').value = c_e.toString()
   document.getElementById('savings').value = c_s.toString()
