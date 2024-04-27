@@ -6,7 +6,8 @@ function Submit(){
   console.log(data_entered)
   var read_data = readfromLocal(data_entered)
   console.log(read_data)
-  insert(read_data)
+  console.log(active_days)
+  insert(read_data, active_days)
 }
 
 // retrieve from form
@@ -46,12 +47,12 @@ function readfromLocal(data_entered){
 }
 
 // insert the data into a value
-function insert(read_data){
+function insert(read_data, actday){
   //not actual values do the computations first and call this function so they run sucessively
-  var c_s = compute_savings(read_data)
-  var c_e = compute_emergency(read_data)
-  var c_n = compute_needs(read_data)
-  var c_w = compute_wants(read_data)
+  var c_s = compute_savings(read_data, actday)
+  var c_e = compute_emergency(read_data, actday)
+  var c_n = compute_needs(read_data, actday)
+  var c_w = compute_wants(read_data, actday)
   document.getElementById('emergency').value = c_e.toString()
   document.getElementById('savings').value = c_s.toString()
   document.getElementById('wants').value = c_w.toString()
@@ -81,34 +82,48 @@ function get_n_set_active(){
 
 // computation functions 
 
-function compute_savings(read_data){
-  amt = read_data[0]
-  var PSavings = parseInt(read_data[2]) / 100
-  Savings_week = amt * PSavings
+function compute_savings(read_data, actday){
+  //exception handling zeroDivisionerror
+  if (actday > 0){
+    amt = read_data[0]
+    var PSavings = parseInt(read_data[2]) / 100
+    Savings_week = (amt * PSavings) / actday
+  
+  }
+  // raise error
+  
   return Savings_week
 }
 
-function compute_needs(read_data){
+function compute_needs(read_data, actday){
   amt = read_data[0]
+  if (actday > 0){
   var PNeeds = parseInt(read_data[4]) / 100
-  Needs_week = amt * PNeeds
+  Needs_week = (amt * PNeeds)/ actday
+}
+  
   return Needs_week
 }
 
-function compute_wants(read_data){
+function compute_wants(read_data, actday){
   amt = read_data[0]
+  if (actday > 0){
   var PWants = parseInt(read_data[3]) / 100
-  Wants_week = amt * PWants
+  Wants_week = (amt * PWants)/ actday
+}
   return Wants_week
 }
 
-function compute_emergency(read_data){
+function compute_emergency(read_data, actday){
   amt = read_data[0]
+  if (actday > 0){
   var PEmergency = parseInt(read_data[1]) / 100
-  Emergency_week = amt * PEmergency
+  Emergency_week = (amt * PEmergency)/ actday
+}
   return Emergency_week
 }
 
+/*
 function compute_per_day(read_data){
   amt = read_data[0]
   var budget_per_day = amt / active_days
@@ -138,3 +153,4 @@ function compute_emergency_per_day(read_data){
   return e_p_d
 }
 //add remaining computations etc here
+*/
