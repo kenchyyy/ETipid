@@ -6,8 +6,9 @@ function Submit(){
   var data_entered = retrieveData()
   console.log(data_entered)
   if(Number(data_entered[1]) + Number(data_entered[2]) + Number(data_entered[3]) + Number(data_entered[4]) !== 100){
-    window.alert("The total of the four Inputs must be 100")
-  }
+    window.alert("The total of the four Inputs must be 100")}
+  else if(handle_negative_input(data_entered) === false){
+    window.alert("Negative values are not alowed")}
   else{
     var read_data = readfromLocal(data_entered)
     console.log(read_data)
@@ -15,8 +16,7 @@ function Submit(){
     console.log(radiobut())
     radio_act = radiobut()
     insert(read_data, active_days, radio_act)
-  }
-}
+  }}
 
 //handles the clear button
 function clearfield(){
@@ -207,3 +207,11 @@ function compute_emergency_per_week(read_data){
 
 return Emergency_week
 }
+
+function handle_negative_input(arraguy){
+  var is_all_number_positive = true
+  for(i = 0; i <= 4; i++){
+    if (Number(arraguy[i]) < 0){
+      is_all_number_positive = false
+  return is_all_number_positive
+    }}}
