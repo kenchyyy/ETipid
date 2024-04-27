@@ -182,7 +182,7 @@ function compute_need_per_week(read_data){
   Needs_week = (amt * PNeeds)
 
   console.log(Needs_week)
-  return Needs_week
+  return Needs_week.toFixed(2)
 }
 
 
@@ -192,7 +192,7 @@ function compute_savings_per_week(read_data){
     var PSavings = parseInt(read_data[2]) / 100
     Savings_week = (amt * PSavings) 
   
-    return Savings_week
+    return Savings_week.toFixed(2)
 }
 
 function compute_wants_per_week(read_data){
@@ -200,7 +200,7 @@ function compute_wants_per_week(read_data){
   var PWants = parseInt(read_data[3]) / 100
   Wants_week = (amt * PWants)
 
-  return Wants_week
+  return Wants_week.toFixed(2)
 }
 
 function compute_emergency_per_week(read_data){
@@ -210,7 +210,7 @@ function compute_emergency_per_week(read_data){
   Emergency_week = (amt * PEmergency)
 
 
-return Emergency_week
+return Emergency_week.toFixed(2)
 }
 
 function handle_negative_input(arraguy){
