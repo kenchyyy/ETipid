@@ -5,12 +5,17 @@ function Submit(){
   console.log(active_days)
   var data_entered = retrieveData()
   console.log(data_entered)
-  var read_data = readfromLocal(data_entered)
-  console.log(read_data)
-  console.log(active_days)
-  console.log(radiobut())
-  radio_act = radiobut()
-  insert(read_data, active_days, radio_act)
+  if(Number(data_entered[1]) + Number(data_entered[2]) + Number(data_entered[3]) + Number(data_entered[4]) !== 100){
+    window.alert("The total of the four Inputs must be 100")
+  }
+  else{
+    var read_data = readfromLocal(data_entered)
+    console.log(read_data)
+    console.log(active_days)
+    console.log(radiobut())
+    radio_act = radiobut()
+    insert(read_data, active_days, radio_act)
+  }
 }
 
 //handles the clear button
