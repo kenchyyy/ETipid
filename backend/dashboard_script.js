@@ -13,6 +13,14 @@ function Submit(){
   insert(read_data, active_days, radio_act)
 }
 
+//handles the clear button
+function clearfield(){
+  document.getElementById('emergency').value = ""
+  document.getElementById('savings').value = ""
+  document.getElementById('wants').value = ""
+  document.getElementById('needs').value = ""
+}
+
 //handling the toggles for the radio buttons
 function radiobut(){
 selected = document.querySelector('input[name ="options"]:checked').id
@@ -68,6 +76,10 @@ function insert(read_data, actday,toggle){
   var cww = compute_wants_per_week(read_data)
   var cew = compute_emergency_per_week(read_data)
   if (toggle == 'day'){
+    if(actday < 1)
+    {
+      alert("You must be active for at least 1 day!")
+    }
   document.getElementById('emergency').value = c_e.toString()
   document.getElementById('savings').value = c_s.toString()
   document.getElementById('wants').value = c_w.toString()
@@ -110,19 +122,16 @@ function compute_savings(read_data, actday){
     amt = read_data[0]
     var PSavings = parseInt(read_data[2]) / 100
     Savings_day = (amt * PSavings) / actday
-    return Savings_day
-  } else {
-    alert("You must be active for at least 1 day")
+    return Savings_day.toFixed(2)
   }
-  // raise error
-  return Savings_day.toFixed(2)
+  
 }
 
 function compute_needs(read_data, actday){
   amt = read_data[0]
   if (actday > 0){
   var PNeeds = parseInt(read_data[4]) / 100
-  Needs_day = (amt * PNeeds)/ actdaDy
+  Needs_day = (amt * PNeeds)/ actday
   return Needs_day.toFixed(2)
 }
   
@@ -155,10 +164,6 @@ function compute_emergency(read_data, actday){
 
 
 
-function compute_per_day(read_data){
-  amt = read_data[0]
-  var budget_per_day = amt / active_days
-}
 
 function compute_need_per_week(read_data){
 
