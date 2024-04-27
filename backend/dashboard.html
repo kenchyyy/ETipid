@@ -200,7 +200,7 @@
         )
 
         //js funct
-
+        const amtsss = document.getElementById('amt')
         const emergency = document.getElementById('emergency_value')
         const savings = document.getElementById('savings_value')
         const wants = document.getElementById('wants_value')
@@ -210,16 +210,23 @@
         
 
         function updateChart(){
-          var total = Number(emergency.value) + Number(savings.value) + Number(wants.value) + Number(needs.value)
-          if(total === 100){
+          var total = Number(emergency.value) + Number(savings.value) + Number(wants.value) + Number(needs.value)    
+          var list_of_inputs = [amtsss.value, emergency.value, savings.value, wants.value, needs.value]
+          if(total === 100 && handle_nega(list_of_inputs)){
             chartId.data.datasets[0].data[0] = emergency.value 
             chartId.data.datasets[0].data[1] = savings.value
             chartId.data.datasets[0].data[2] = wants.value  
             chartId.data.datasets[0].data[3] = needs.value 
             chartId.update()
           }
-
         }
+        function handle_nega(arraguy){
+          var is_all_number_positive = true
+          for(i = 0; i <= 4; i++){
+            if (Number(arraguy[i]) < 0){
+              is_all_number_positive = false
+          return is_all_number_positive
+        }}}
         
 
 
