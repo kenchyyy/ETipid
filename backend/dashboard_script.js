@@ -1,5 +1,6 @@
 function Submit(){
 //active days, newly added by Clyde
+//notes: active days is required to get per day
   var active_days = get_n_set_active()
   console.log(active_days)
   var data_entered = retrieveData()
@@ -7,9 +8,17 @@ function Submit(){
   var read_data = readfromLocal(data_entered)
   console.log(read_data)
   console.log(active_days)
-  insert(read_data, active_days)
+  console.log(radiobut())
+  radio_act = radiobut()
+  insert(read_data, active_days, radio_act)
 }
 
+//handling the toggles for the radio buttons
+function radiobut(){
+selected = document.querySelector('input[name ="options"]:checked').id
+return selected
+
+}
 // retrieve from form
 function retrieveData(){
   var amount = document.getElementById('amt').value
@@ -47,16 +56,29 @@ function readfromLocal(data_entered){
 }
 
 // insert the data into a value
-function insert(read_data, actday){
+function insert(read_data, actday,toggle){
   //not actual values do the computations first and call this function so they run sucessively
   var c_s = compute_savings(read_data, actday)
   var c_e = compute_emergency(read_data, actday)
   var c_n = compute_needs(read_data, actday)
   var c_w = compute_wants(read_data, actday)
+
+  var cnw =compute_need_per_week(read_data)
+  var csw = compute_savings_per_week(read_data)
+  var cww = compute_wants_per_week(read_data)
+  var cew = compute_emergency_per_week(read_data)
+  if (toggle == 'day'){
   document.getElementById('emergency').value = c_e.toString()
   document.getElementById('savings').value = c_s.toString()
   document.getElementById('wants').value = c_w.toString()
   document.getElementById('needs').value = c_n.toString()
+} else if (toggle == 'week')
+{
+  document.getElementById('needs').value = cnw.toString()
+  document.getElementById('savings').value = csw.toString()
+  document.getElementById('wants').value = cww.toString()
+  document.getElementById('emergency').value = cew.toString()
+}
   //call made methods here
 }
 
@@ -101,7 +123,8 @@ function compute_needs(read_data, actday){
   amt = read_data[0]
   if (actday > 0){
   var PNeeds = parseInt(read_data[4]) / 100
-  Needs_week = (amt * PNeeds)/ actday
+  Needs_day = (amt * PNeeds)/ actday
+  return Needs_day
 }
   
   return Needs_week.toFixed(2)
@@ -111,7 +134,8 @@ function compute_wants(read_data, actday){
   amt = read_data[0]
   if (actday > 0){
   var PWants = parseInt(read_data[3]) / 100
-  Wants_week = (amt * PWants)/ actday
+  Wants_day = (amt * PWants)/ actday
+  return Wants_day
 }
   return Wants_week.toFixed(2)
 }
@@ -131,30 +155,40 @@ function compute_per_day(read_data){
   var budget_per_day = amt / active_days
 }
 
-function compute_need_per_day(read_data){
+function compute_need_per_week(read_data){
+
   amt = read_data[0]
-  n_p_d = budget_per_day * PNeeds
-  return n_p_d
+  var PNeeds = parseInt(read_data[4]) / 100
+  Needs_week = (amt * PNeeds)
+
+  console.log(Needs_week)
+  return Needs_week
 }
 
-function compute_savings_per_day(read_data){
-  amt = read_data[0]
-  s_p_d = budget_per_day * PSavings
-  return s_p_d
+
+function compute_savings_per_week(read_data){
+ 
+    amt = read_data[0]
+    var PSavings = parseInt(read_data[2]) / 100
+    Savings_week = (amt * PSavings) 
+  
+    return Savings_week
 }
 
-function compute_wants_per_day(read_data){
-  amt = read_data[0]
-  w_p_d = budget_per_day * PWants
-  return w_p_d
+function compute_wants_per_week(read_data){
+   amt = read_data[0]
+  var PWants = parseInt(read_data[3]) / 100
+  Wants_week = (amt * PWants)
+
+  return Wants_week
 }
 
-function compute_emergency_per_day(read_data){
-  amt = read_data[0]
-  e_p_d = budget_per_day * PEmergency
-  return e_p_d
-}
-//add remaining computations etc here
+function compute_emergency_per_week(read_data){
+   amt = read_data[0]
+ 
+  var PEmergency = parseInt(read_data[1]) / 100
+  Emergency_week = (amt * PEmergency)
 
-pwede ni natun ma computan karun sang toggle switch if interested
-*/
+
+return Emergency_week
+}
