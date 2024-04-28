@@ -18,7 +18,9 @@ function Submit(){
     console.log(active_days)
     console.log(radiobut())
     radio_act = radiobut()
+
     insert(read_data, active_days, radio_act)
+    calculate_days_goal(read_data)
   }}
 
 //handles the clear button
@@ -221,21 +223,32 @@ function handle_negative_input(arraguy){
   return is_all_number_positive
     }}}
 
-function openModal() {
-  myModal.show();
+
+
+
+function calculate_days_goal(read_data){
+ 
+  var savingsweek = parseInt(compute_need_per_week(read_data))
+  
+  var goal_amount = parseInt(document.getElementById('goals_num').value)
+  if (savingsweek != 0){
+  var days_left = (goal_amount / savingsweek)/7
+ 
+
+  document.getElementById('modal_days').value = days_left.toFixed(2).toString()
+} else{
+
+  const toastContent = document.getElementById("savings_not_zero")
+      const toast = new  bootstrap.Toast(toastContent)
+      toast.show()
+
 }
 
-function closeModal() {
-  myModal.hide();
 }
-
-function calculate_days_goal(){
-  var goal_amount = document.getElementById('goals_num').value
-  var days_left = goal_amount / Savings_day
-  return days_left
-}
+/*
 
 function calculate_weeks_goal(){
   var week_left = goal_amount / Savings_week
   return week_left
 }
+*/
