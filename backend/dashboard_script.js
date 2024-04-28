@@ -6,7 +6,10 @@ function Submit(){
   var data_entered = retrieveData()
   console.log(data_entered)
   if(Number(data_entered[1]) + Number(data_entered[2]) + Number(data_entered[3]) + Number(data_entered[4]) !== 100){
-    window.alert("The total of the four Inputs must be 100")}
+    const toastContent = document.getElementById("add_up_to")
+    const toast = new  bootstrap.Toast(toastContent)
+    toast.show() 
+  }
   else if(handle_negative_input(data_entered) === false){
     window.alert("Negative values are not alowed")}
   else{
@@ -83,7 +86,9 @@ function insert(read_data, actday,toggle){
   if (toggle == 'day'){
     if(actday < 1)
     {
-      alert("You must be active for at least 1 day!")
+      const toastContent = document.getElementById("one_act_day")
+      const toast = new  bootstrap.Toast(toastContent)
+      toast.show()
     }
   document.getElementById('emergency').value = c_e.toString()
   document.getElementById('savings').value = c_s.toString()
@@ -177,7 +182,7 @@ function compute_need_per_week(read_data){
   Needs_week = (amt * PNeeds)
 
   console.log(Needs_week)
-  return Needs_week
+  return Needs_week.toFixed(2)
 }
 
 
@@ -187,7 +192,7 @@ function compute_savings_per_week(read_data){
     var PSavings = parseInt(read_data[2]) / 100
     Savings_week = (amt * PSavings) 
   
-    return Savings_week
+    return Savings_week.toFixed(2)
 }
 
 function compute_wants_per_week(read_data){
@@ -195,7 +200,7 @@ function compute_wants_per_week(read_data){
   var PWants = parseInt(read_data[3]) / 100
   Wants_week = (amt * PWants)
 
-  return Wants_week
+  return Wants_week.toFixed(2)
 }
 
 function compute_emergency_per_week(read_data){
@@ -205,7 +210,7 @@ function compute_emergency_per_week(read_data){
   Emergency_week = (amt * PEmergency)
 
 
-return Emergency_week
+return Emergency_week.toFixed(2)
 }
 
 function handle_negative_input(arraguy){

@@ -6,11 +6,16 @@
     <title>E-Tipid Dashboard</title>
     <!-- Bootstrap CDN-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- PopperJS lib-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    
+    <!-- External JS Script-->
     <script src="./dashboard_script.js"></script>
+    <!-- ChartJS Library-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.1/chart.min.js"></script>
-</head>
+    <!-- FontAwesome CDN-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
         <div class="container-fluid">
@@ -29,8 +34,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
+                <!-- Anchor and link landing page-->
+                <a class="nav-link active" aria-current="page" href="#">Spend List</a>
+              </li>
+              <li class="nav-item">
                 <!-- Don't remove this is just for demo-->
                 <a class="nav-link disabled" href="#">Pricing</a>
+                </li>
               
             </ul>
           </div>
@@ -100,7 +110,7 @@
             <!--I put read only text input fields but feel free to change it to
             buttons or cuztomize it, up to you na na-->
             <div class="col-md-4">
-              <h6 class='display-6'> Amount</h6>
+              <h6 class='display-6 tt' data-bs-placement="right" title="Total Budget Amount"> Amount</h6>
                 <div class="form-floating mb-3 ">
                     <input type="number" class="form-control " id="amt" placeholder="Amount" value = 0 >
                     <label for="amt">Amount</label>
@@ -171,6 +181,42 @@
             </div>
         
       </div>
+
+
+      <!-- My lovely toasts hihi-->
+
+      <!--Must select at least one day!-->
+      <div class="tost-container position-fixed bottom-0 end-0 p-3" >
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="one_act_day">
+            <div class="toast-header">
+              <i class="fas fa-exclamation-circle mx-1"></i>
+              <strong class="me-auto">Alert!</strong>
+              <button type="button" class="ml-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="toast-body">
+              Must select at least one active day!
+            </div>
+          </div>
+        </div>
+
+        <!--Values must add up to 100-->
+        <div class="tost-container position-fixed bottom-0 end-0 p-3" >
+          <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="add_up_to">
+              <div class="toast-header">
+                <i class="fas fa-exclamation-circle mx-1"></i>
+                <strong class="me-auto">Alert!</strong>
+                <button type="button" class="ml-2 mb-1" data-bs-dismiss="toast" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="toast-body">
+                Values must add up to a hundred!
+              </div>
+            </div>
+          </div>
+
 
       <!-- internal js feel free to move to another external script-->
       <script>
