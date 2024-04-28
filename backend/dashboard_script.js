@@ -131,7 +131,7 @@ function compute_savings(read_data, actday){
   if (actday > 0){
     amt = read_data[0]
     var PSavings = parseInt(read_data[2]) / 100
-    Savings_day = (amt * PSavings) / actday
+    var Savings_day = (amt * PSavings) / actday
     return Savings_day.toFixed(2)
   }
   
@@ -190,7 +190,7 @@ function compute_savings_per_week(read_data){
  
     amt = read_data[0]
     var PSavings = parseInt(read_data[2]) / 100
-    Savings_week = (amt * PSavings) 
+    var Savings_week = (amt * PSavings) 
   
     return Savings_week.toFixed(2)
 }
@@ -220,3 +220,22 @@ function handle_negative_input(arraguy){
       is_all_number_positive = false
   return is_all_number_positive
     }}}
+
+function openModal() {
+  myModal.show();
+}
+
+function closeModal() {
+  myModal.hide();
+}
+
+function calculate_days_goal(){
+  var goal_amount = document.getElementById('goals_num').value
+  var days_left = goal_amount / Savings_day
+  return days_left
+}
+
+function calculate_weeks_goal(){
+  var week_left = goal_amount / Savings_week
+  return week_left
+}
