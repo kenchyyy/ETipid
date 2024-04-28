@@ -232,10 +232,15 @@ function calculate_days_goal(read_data){
   
   var goal_amount = parseInt(document.getElementById('goals_num').value)
   if (savingsweek != 0){
-  var days_left = (goal_amount / savingsweek)/7
+
+  var days_left = (goal_amount / savingsweek) * 7
+  var min_left = (goal_amount /savingsweek) * 10080
+  var sec_left = (goal_amount / savingsweek) * 604800
  
 
-  document.getElementById('modal_days').value = days_left.toFixed(2).toString()
+  document.getElementById('modal_days').value = days_left.toString()
+  document.getElementById('modal_min').value = min_left.toString()
+  document.getElementById('modal_sec').value = sec_left.toString()
 } else{
 
   const toastContent = document.getElementById("savings_not_zero")
