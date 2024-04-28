@@ -220,3 +220,11 @@ function handle_negative_input(arraguy){
       is_all_number_positive = false
   return is_all_number_positive
     }}}
+
+function openModal() {
+  myModal.show();
+}
+
+function closeModal() {
+  myModal.hide();
+}
