@@ -58,6 +58,10 @@
        font-size: 3.5rem; 
        line-height: 3.3rem;
     }
+
+    .image-container img {
+        width: 600px;
+    }
   
   }
   
