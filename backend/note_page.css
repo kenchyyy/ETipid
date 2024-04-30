@@ -1,0 +1,54 @@
+.container {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+.nav-link {
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: " ";
+    opacity: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.55);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 15px whitesmoke;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.img-fluid {
+    width: 5rem;
+    height: auto;
+    transition: 0.5s;
+}
+
+.img-fluid:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.card {
+    max-width: 18rem;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+
