@@ -1,68 +1,65 @@
 .body {
-    /* font-family: "Livvic", sans-serif; */
-    font-family: "Orbitron", sans-serif;
-    background: url(pictures/bg1.png) no-repeat center center fixed;
-    background-size: cover;
-    width: 100%;
-  }
+  /* font-family: "Livvic", sans-serif; */
+  font-family: "Orbitron", sans-serif;
+  background: url(pictures/bg1.png) no-repeat center center fixed;
+  background-size: cover;
+  width: 100%;
+}
+
+.web-name {
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 90px;
+  margin-top: 90px;
+  color: whitesmoke;    
+  
+}
+
+.par-1 {
+  font-size: 4.3rem;
+  line-height: 4.5rem;
+  color: linear-gradient(rgb(50, 50, 50) 0%, rgb(63, 63, 63) 40%, rgb(28, 28, 28) 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  font-weight: bold;
+}
+
+.par-1-span {
+  color: rgb(103, 100, 100);
+}
+
+.par-2-span {
+  color: rgb(63, 63, 63);
+  font-size: 1rem;
+  font-family: Arial, sans-serif;
+}
+
+.image-container {
+  max-width: 100%;
+  position: relative;
+  height: auto;
+  
+  
+}
+.image-container img {
+  width: 40rem;
+  margin: 0;
+  height: 72vh;
+  
+}
+  
+@media (max-width: 900px) {
   
   .web-name {
-    font-weight: bold;
-    font-size: 3rem;
-    margin-bottom: 90px;
-    margin-top: 90px;
-    color: whitesmoke;    
-    
+      font-size: 1.8rem;
   }
-  
-  .par-1 {
-    font-size: 4.3rem;
-    line-height: 4.5rem;
-    color: linear-gradient(rgb(50, 50, 50) 0%, rgb(63, 63, 63) 40%, rgb(28, 28, 28) 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
-    font-weight: bold;
-  }
-  
-  .par-1-span {
-    color: rgb(103, 100, 100);
-  }
-  
-  .par-2-span {
-    color: rgb(63, 63, 63);
-    font-size: 1rem;
-    font-family: Arial, sans-serif;
-  }
-  
-  .image-container {
-    max-width: 100%;
-    overflow: hidden;
-    position: relative;
-    perspective: 500px;
-    transform-style: preserve-3d;
-    margin: 0 auto;
-    
-  }
-  .image-container img {
-    width: 800px;
-    margin: 0;
-    height: 90vh;
-    
-  }
-    
-  @media (max-width: 780px) {
-    
-    .web-name {
-        font-size: 1.8rem;
-    }
-  
-    .par-1 {
-       font-size: 3.5rem; 
-       line-height: 3.3rem;
-    }
 
-    .image-container img {
-        width: 600px;
-    }
-  
+  .par-1 {
+     font-size: 3.5rem; 
+     line-height: 3.3rem;
   }
-  
-  
+
+  .image-container img {
+      width: 30rem;
+      margin-top: 30px;
+  }
+}
+
