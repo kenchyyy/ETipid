@@ -1,0 +1,103 @@
+.img-fluid {
+    width: 5rem;
+    height: auto;
+    transition: 0.5s;
+}
+
+.img-fluid:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+.nav-link {
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: " ";
+    opacity: 0;
+    height: 2px;
+    width: 100%;
+    transition: 0.3s;
+    background-color: rgba(255, 255, 255, 0.55);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.nav-link:hover {
+    text-shadow: 0 0 15px whitesmoke;
+    transition: 0.3s;
+    transform: scale(1.05);
+}
+
+.col-sm-2 {
+    background-color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.col-sm-4 {
+    background-color: whitesmoke;
+}
+
+.col-md-4 {
+    background-color: whitesmoke;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.btn-outline-secondary:hover {
+    box-shadow: 0 0 10px lightslategrey;
+}
+
+.btn-secondary {
+    border-radius: 5px;
+}
+
+.row-cols-md-4 {
+    background-color: whitesmoke;
+    border-radius: 10px;
+}
+
+
+.fa-sun:hover {
+    animation: animation 0.4s linear;
+}
+
+.fa-trophy:hover {
+    animation: animation 0.4s linear;
+}
+
+.fa-clock:hover {
+    animation: animation 0.4s linear;
+}
+
+.fa-cog:hover {
+    animation: animation 0.4s linear;
+}
+
+@keyframes animation {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+

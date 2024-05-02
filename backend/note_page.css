@@ -42,6 +42,10 @@
     transform: scale(1.1);
 }
 
+.fa-shopping-cart:hover {
+    animation: animation 0.5s linear;
+}
+
 .card {
     max-width: 18rem;
     transition: 0.3s;
@@ -52,3 +56,20 @@
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
 }
 
+@keyframes animation {
+    40% {
+        transform: scale(1.4);
+    }
+
+    60% {
+        transform: scale(0.8);
+    }
+
+    80% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
