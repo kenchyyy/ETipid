@@ -14,6 +14,10 @@
     <link rel = "stylesheet" href="./spinner.css">
     <link rel = "stylesheet" href="./goal.css">
     <link rel="stylesheet" href="note_page.css">
+
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     </head>
 <body>
 
@@ -28,8 +32,9 @@
     <script src="./spinner.js"></script> 
 
   <!--SPINNER END-->
+  <div id="particles-js">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <div class="container-fluid">
+        <div class="container-fluid navv">
           <a class="navbar-brand" href="#">
             <!-- please make sure to either make a div
             or a specific height in rem for the img-->
@@ -61,8 +66,9 @@
           </div>
         </div>
       </nav>
+   
 <!--NOTES-->
-      <div class="container col-xl-11 col-xxl-8 pt-4 my-3 pb-3">
+      <div class="container col-xl-11 col-xxl-8 pt-4 my-3 pb-3 cont1">
         <h4 class="display-4"><i class="fas fa-shopping-cart"></i>Items list</h4>
         <p class="muted"> Create a new item</p>
         <!-- NAME OF ITEM-->
@@ -132,9 +138,9 @@
             <!--Notecards-->
         </div>
       </div>
-     
+    </div>
 <!--External JS-->
-<script src="./note.js"></script>
+
 
 <!-- Script for the SEARCH BAR-->
 <script>
@@ -164,5 +170,9 @@
   new bootstrap.Tooltip(t)
  })
 </script>
+  
+  <script src="./particlejs/particles.js"></script>
+  <script src="./particlejs/app.js"></script>
+<script src="./note.js"></script>
 </body>
 </html>

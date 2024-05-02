@@ -1,3 +1,9 @@
+h4,h6, .navv, .btn, #chartId, .toast-header, .offcanvas-title , h1{
+    /* font-family: "Livvic", sans-serif; */
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem; }
+
+
 .container {
     background-color: whitesmoke;
     border-radius: 10px;
@@ -44,6 +50,7 @@
 
 .fa-shopping-cart:hover {
     animation: animation 0.5s linear;
+    color: aliceblue;
 }
 
 .card {
@@ -72,4 +79,52 @@
     100% {
         transform: scale(1);
     }
+}
+
+.btn-outline-secondary:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+:root{
+    --grad1 : black;
+    --grad2: darkgray;
+    --grad3: rgb(56, 58, 63);
+    --grad4: rgb(128, 101, 101);
+    --grad5: rgb(207, 204, 204);
+    --grad6: white;
+    --grad7: rgb(228, 228, 228);
+}
+
+body{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+
+
+.cont1 {
+    background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad5), var(--grad7));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+ }
+
+@keyframes color{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+#particles-js{
+    height:100px;
+    width: 100%;
+    z-index: -1;
 }

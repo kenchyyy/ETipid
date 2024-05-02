@@ -1,3 +1,10 @@
+h6, .navv, .btn, #chartId, .toast-header {
+    /* font-family: "Livvic", sans-serif; */
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+
+}
+
 .img-fluid {
     width: 5rem;
     height: auto;
@@ -15,6 +22,11 @@
     position: relative;
 }
 
+.form-control:focus{
+    background-color: rgb(240, 237, 237);
+    color:rgb(96, 98, 100);
+    box-shadow: 0 0 10px rgb(73, 83, 94);
+}
 .nav-link::after {
     content: " ";
     opacity: 0;
@@ -60,6 +72,9 @@
 .btn-secondary {
     border-radius: 5px;
 }
+.btn-secondary:hover {
+    box-shadow: 0 0 10px lightslategrey;
+}
 
 .row-cols-md-4 {
     background-color: whitesmoke;
@@ -69,18 +84,22 @@
 
 .fa-sun:hover {
     animation: animation 0.4s linear;
+    color: aliceblue;
 }
 
 .fa-trophy:hover {
     animation: animation 0.4s linear;
+    color: aliceblue;
 }
 
 .fa-clock:hover {
     animation: animation 0.4s linear;
+    color: aliceblue;
 }
 
 .fa-cog:hover {
     animation: animation 0.4s linear;
+    color: rgb(128, 128, 128);
 }
 
 @keyframes animation {
@@ -101,3 +120,58 @@
     }
 }
 
+/* change gradients here */
+
+:root{
+     --grad1 : black;
+     --grad2: darkgray;
+     --grad3: rgb(56, 58, 63);
+     --grad4: rgb(128, 101, 101);
+     --grad5: rgb(207, 204, 204);
+     --grad6: white;
+     --grad7: rgb(228, 228, 228);
+}
+.cont1, .cont4 {
+     background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad5), var(--grad7));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+}
+body{
+
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+
+}
+.dvcenter{
+    background: linear-gradient(45deg, var(--grad2), var(--grad6), var(--grad5));
+    animation: color 12s ease-in-out infinite;
+  
+}
+
+.cont3 {
+    background: linear-gradient(45deg, var(--grad6), var(--grad7), var(--grad5));
+    animation: color 12s ease-in-out infinite;
+}
+
+
+#particles-js{
+    height:100px;
+    width: 100%;
+    z-index: -1;
+}
+
+@keyframes color{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
