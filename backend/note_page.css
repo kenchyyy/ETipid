@@ -5,10 +5,29 @@ h4,h6, .navv, .btn, #chartId, .toast-header, .offcanvas-title , h1{
 
 
 .container {
-    background-color: whitesmoke;
+    background-color: rgba(243, 243, 243 ,0.5);
     border-radius: 10px;
 }
+input{
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.5) ;
+}
+.card{
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.2),  rgba(255, 255, 255,0));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 247, 247,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.5);
 
+.del:hover {
+    background-color: aliceblue;
+    color: #000;
+    border: none;
+}
+
+
+}
 .nav-link {
     text-decoration: none;
     transition: 0.3s;
@@ -37,6 +56,9 @@ h4,h6, .navv, .btn, #chartId, .toast-header, .offcanvas-title , h1{
     transform: scale(1.05);
 }
 
+.btn{
+box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.2);
+}
 .img-fluid {
     width: 5rem;
     height: auto;
@@ -48,7 +70,7 @@ h4,h6, .navv, .btn, #chartId, .toast-header, .offcanvas-title , h1{
     transform: scale(1.1);
 }
 
-.fa-shopping-cart:hover {
+.fa-shopping-cart:hover, .fa-magnifying-glass:hover {
     animation: animation 0.5s linear;
     color: aliceblue;
 }
@@ -105,9 +127,11 @@ body{
 
 
 .cont1 {
-    background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad5), var(--grad7));
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.1),  rgba(255, 255, 255,0));
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
+    border: 1px solid rgba(255, 247, 247,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.37);
  }
 
 @keyframes color{

@@ -66,14 +66,14 @@ h6, .navv, .btn, #chartId, .toast-header {
 }
 
 .btn-outline-secondary:hover {
-    box-shadow: 0 0 10px lightslategrey;
+    box-shadow: 0 0 20px rgb(0, 0, 0);
 }
 
 .btn-secondary {
     border-radius: 5px;
 }
 .btn-secondary:hover {
-    box-shadow: 0 0 10px lightslategrey;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 .row-cols-md-4 {
@@ -99,7 +99,7 @@ h6, .navv, .btn, #chartId, .toast-header {
 
 .fa-cog:hover {
     animation: animation 0.4s linear;
-    color: rgb(128, 128, 128);
+    color: rgb(255, 255, 255);
 }
 
 @keyframes animation {
@@ -132,9 +132,11 @@ h6, .navv, .btn, #chartId, .toast-header {
      --grad7: rgb(228, 228, 228);
 }
 .cont1, .cont4 {
-     background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad5), var(--grad7));
+     background: linear-gradient(135deg, rgba(255, 255, 255,0.1),  rgba(255, 255, 255,0));
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
+    border: 1px solid rgba(255, 247, 247,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.37);
 }
 body{
 
@@ -146,15 +148,26 @@ body{
 
 }
 .dvcenter{
-    background: linear-gradient(45deg, var(--grad2), var(--grad6), var(--grad5));
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.1),  rgba(255, 255, 255,0));
+    background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
-  
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 247, 247,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.37);
 }
 
+
 .cont3 {
-    background: linear-gradient(45deg, var(--grad6), var(--grad7), var(--grad5));
+    background: linear-gradient(135deg, rgba(255, 255, 255,0.1),  rgba(255, 255, 255,0));
+    background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 247, 247,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.37);
 }
+
 
 
 #particles-js{
@@ -175,3 +188,4 @@ body{
         background-position: 0% 50%;
     }
 }
+

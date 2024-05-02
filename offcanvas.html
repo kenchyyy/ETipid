@@ -1,0 +1,30 @@
+<button class="btn btn-outline-secondary tt" type="button" data-bs-placement="top" title="Open Etipid's To do list!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-trophy"></i>&nbsp;To Do Goal Tracker</button>
+
+        <!-- OFF CANVAS-->
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Goal To Do!</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h1 class="display-6">Goals Manager</h1>
+           <form action="">
+           <div class="input-group mb-3">
+            <input type="text" class="form-control todo-input" placeholder="Add goals" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary todo-button" type="button" id="button-addon2"><i class="fa-solid fa-plus"></i></button>
+         
+          </div>
+        </form>
+
+        <!-- END OF OFF CANVAS-->
+
+         
+          <!-- Goal container-->
+          <div class="todo-container">
+            <ul class="todo-list">
+
+            </ul>
+          </div>
+          <script src="./goal-script.js"></script>
+
+          <link rel = "stylesheet" href="./goal.css">

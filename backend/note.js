@@ -46,12 +46,12 @@ function showNotes(){
 
     notesObj.forEach(function(element, index){
         cardGroup += `
-        <div class="card border-dark mb-3 m-3" style="max-width: 18rem;">
+        <div class="card border-light mb-3 m-3" style="max-width: 18rem;">
              <div class="card-header"><i class="fa-solid fa-peso-sign"></i>${element.cost}  <b>${element.title}</b></div>
              <div class="card-body text-dark">
              <p class="card-text"> ${element.description}
              </p>
-             <button class="btn btn-dark" id="${index}" onclick ="deleteNote(${this.id})"> Delete </button>
+             <button class="btn  btn-outline-secondary del" id="${index}" onclick ="deleteNote(${this.id})"> <i class="fa-solid fa-trash-can"></i> </button>
         </div>
 </div>
          `
