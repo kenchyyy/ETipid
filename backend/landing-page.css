@@ -9,25 +9,20 @@
 .web-name {
   font-weight: bold;
   font-size: 3rem;
-  margin-bottom: 90px;
+  margin-bottom: 50px;
   margin-top: 90px;
-  color: whitesmoke;    
-  
+  color: rgb(128, 128, 128);
 }
 
 .par-1 {
   font-size: 4.3rem;
   line-height: 4.5rem;
-  color: linear-gradient(rgb(50, 50, 50) 0%, rgb(63, 63, 63) 40%, rgb(28, 28, 28) 150%), linear-gradient(to top, rgba(255, 255, 255, 0.4) 0%, rgba(0, 0, 0, 0.25) 200%);
+  color: rgb(255, 255, 255);
   font-weight: bold;
 }
 
-.par-1-span {
-  color: rgb(103, 100, 100);
-}
-
 .par-2-span {
-  color: rgb(63, 63, 63);
+  color: rgb(128, 128, 128);
   font-size: 1rem;
   font-family: Arial, sans-serif;
 }
