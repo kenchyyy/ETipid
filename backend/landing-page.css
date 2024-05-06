@@ -1,7 +1,7 @@
 .body {
   /* font-family: "Livvic", sans-serif; */
   font-family: Arial, sans-serif;
-  background: url(pictures/background3.png) no-repeat center center fixed;
+  background: url(pictures/background.png) no-repeat center center fixed;
   background-size: cover;
   width: 100%;
 }
