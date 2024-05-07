@@ -75,13 +75,13 @@
 </div>
 </div>
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center row">
             <!-- left side the days-->
          
             <div class="col-sm-5 p-4 cont1 my-1 mx-5">
                 <!-- Button trigger modal -->
                     <div class="row px-3">
-                        <button type="button" class="btn btn-primary py-3" data-bs-toggle="modal" data-bs-target="#Days">
+                        <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#Days">
                             Days
                         </button>
                     </div>
@@ -95,7 +95,7 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h6 class="display-6 tt"  data-bs-placement="right" title="Show per week allocation"><i class="fa-solid fa-sun"></i> &nbsp;Days Active</h6>
+                                <h4 class="display-6 tt"  data-bs-placement="right" title="Show per week allocation"><i class="fa-solid fa-sun"></i> &nbsp;Days Active</h4>
                                 <form id="days-act-inact">
                                 <div class="form-check form-switch">
                                     <label for="monday-tog" class="form-check-label">Monday</label>
@@ -134,7 +134,7 @@
 
                     <!-- Button trigger modal -->
                     <div class="row px-3">
-                        <button type="button" class="btn btn-primary g-4 py-3" data-bs-toggle="modal" data-bs-target="#Inputs">
+                        <button type="button" class="btn btn-primary g-4 p-5" data-bs-toggle="modal" data-bs-target="#Inputs">
                             Inputs
                         </button>
                     </div>
@@ -148,39 +148,58 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-
-                                <div class="container-fluid cont4 py-2 my-0 ">
-                                    <div class="row row-cols-md-1 row-cols-1 p-3 cont4">
-                                        <h6 class='display-6'> <i class="fas fa-cog"></i> &nbsp;Input</h6>
+                              
+                              <!-- Amount-->
+                                      <div class="col-12-sm-4 p-3 cont3 mt-5">
+                                        <h6 class='display-6 tt' data-bs-placement="right" title="Total Budget Amount"> <i class="fas fa-cog"></i> &nbsp;Amount</h6>
+                                        <div class="input-group mb-3 ">
+                                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-peso-sign"></i></span>
+                                            <input type="number" class="form-control " id="amt" placeholder="Amount" value = 0 >
+                                          </div>
+                                           
+                                         
+                                        <h6 class='display-6'> <i class="fas fa-cog"></i> &nbsp;Percent</h6>
                                          <!--Emergency text field-->
                                         <div class="col-lg-6">
-                                            <label for="emergency_value" class="form-label">Emergency</label>
+                                          <label for="emergency_value" class="form-label">Emergency</label>
+                                          <div class="input-group mb-3">
                                             <input type="number" class="form-control p-3 " id="emergency_value" value="10">
+                                            <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                                          </div>
                                         </div>
                                         <!--Savings text field-->
                                         <div class="col-lg-6">
                                             <label for="savings_value" class="form-label">Savings</label>
+                                            <div class="input-group mb-3">
                                             <input type="number" class="form-control p-3" id="savings_value" value="45">
+                                            <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                                          </div>
                                         </div>
                                         <!--wants text field-->
                                         <div class="col-lg-6">
                                             <label for="wants_value" class="form-label">Wants</label>
+                                            <div class="input-group mb-3"> 
                                             <input type="number" class="form-control p-3" id="wants_value" value="25">
+                                            <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                                            </div>
                                         </div>
                                         <!--Needs text field-->
                                         <div class="col-lg-6">
                                             <label for="needs_value" class="form-label">Needs</label>
+                                            <div class="input-group mb-3"> 
                                             <input type="number" class="form-control p-3" id="needs_value" value="20">
+                                            <span class="input-group-text"><i class="fas fa-percent"></i></span>
+                                            </div>
                                         </div>
                                         
                                         
                                             <!-- Update button-->
                                             <div class="row g-2 justify-content-center row-cols-1 my-2">
-                                                <button id="update_but" class="btn btn-outline-secondary btn-lg btn-block tt" data-bs-placement="top" title="Update the Output values" onclick="updateChart(); Submit()">
+                                                <button id="update_but" class="btn btn-primary btn-lg btn-block tt" data-bs-placement="top" title="Update the Output values" onclick="updateChart(); Submit()">
                                                     Update
                                                 </button>
                                             </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                     </div>
@@ -191,9 +210,10 @@
                 <div class="row justify-content-end mt-5 row-cols-lg-1 gy-3">
                     <form id= 'goals_form'>
                     <h6 class="display-6 tt text-light"  data-bs-placement="right" title="Set your goals!"><i class="fas fa-trophy"></i> &nbsp;Set Goal</h6>
-                        <div class="form-floating my-4 ">
+                        <div class="my-4 input-group ">
+                          <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-peso-sign"></i></span>
                             <input type="number" class="form-control " id="goals_num" placeholder="My Goal" value = 0 >
-                            <label for="goals_num">My Goal</label>
+                            
                         </div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-outline-light p-3" data-bs-toggle="modal" data-bs-target="#progress">
@@ -210,7 +230,7 @@
                         </div>
 
                     <div class="modal-body text-center">
-                        <h6 class="display-6"><i class="fa-solid fa-clock"></i> &nbsp;Time Left </h4>
+                        <h4 class="display-6"><i class="fa-solid fa-clock"></i> &nbsp;Time Left</h4>
                         
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
@@ -277,43 +297,56 @@
             
             </div>
         </div>
-      </div>
+     
       <!--container for the input fields-->
 
         <!-- RIGHT SIDE -->
         <!--I put read only text input fields but feel free to change it to
         buttons or cuztomize it, up to you na na-->
         <div class="col-12-sm-4 p-3 cont3 mt-5">
-            <h6 class='display-6 tt' data-bs-placement="right" title="Total Budget Amount"> <i class="fas fa-cog"></i> &nbsp;Amount</h6>
-            <div class="form-floating mb-3 ">
-                <input type="number" class="form-control " id="amt" placeholder="Amount" value = 0 >
-                <label for="amt">Amount</label>
-            </div>
+            
             <!-- toggle switch for radios-->
+            <h6 class='display-6'> <i class="fas fa-cog"></i> &nbsp;Output</h6>
             <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per week allocation" name="options" id="week" autocomplete="off" checked>
-            <label class="btn btn-outline-secondary" for="week">Week</label>
+            <label class="btn btn-outline-light p-3" for="week">Week</label>
 
             <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per day allocation" name="options" id="day" autocomplete="off">
-            <label class="btn btn-outline-secondary" for="day">Day</label>
-            <h6 class='display-6'> <i class="fas fa-cog"></i> &nbsp;Output</h6>
-            <div class="form-floating mb-3 ">
-                <input type="number" class="form-control " id="emergency" placeholder="Emergency" readonly>
-                <label for="emergency">Emergency</label>
+            <label class="btn btn-outline-light p-3" for="day">Day</label>
+            
+            <div class="my-3">
+              <label for="emergency" class="form-label"><h6>Emergency</h6></label>
+              <div class="input-group ">
+                <span class="input-group-text"><i class="fa-solid fa-peso-sign"></i></span>
+                <input type="number" class="form-control p-3" id="emergency" placeholder="Emergency" readonly>
+              
+              </div>
             </div>
 
-            <div class="form-floating mb-3 ">
-                <input type="number" class="form-control " id="savings" placeholder="Savings" readonly>
-                <label for="savings">Savings</label>
+            <div class="my-3">
+              <label for="savings"class="form-label"><h6>Savings</h6></label>
+              <div class="input-group ">
+                <span class="input-group-text"><i class="fa-solid fa-peso-sign"></i></span>
+                <input type="number" class="form-control p-3 " id="savings" placeholder="Savings" readonly>
+              </div>
+                
             </div>
 
-            <div class="form-floating mb-3 ">
-                <input type="number" class="form-control " id="wants" placeholder="Amount" readonly>
-                <label for="wants">Wants</label>
+            <div class="my-3">
+              <label for="wants" class="form-label"><h6>Wants</h6></label>
+              <div class="input-group "> 
+                <span class="input-group-text"><i class="fa-solid fa-peso-sign"></i></span>
+                <input type="number" class="form-control p-3" id="wants" placeholder="Wants" readonly>
+              </div>
+               
             </div>
 
-            <div class="form-floating mb-3 ">
-                <input type="number" class="form-control " id="needs" placeholder="Amount" readonly>
-                <label for="needs">Needs</label>
+            <div class="my-3">
+              <label for="needs" class="form-label"><h6>Needs</h6></label>
+              <div class="input-group "> 
+                <span class="input-group-text"><i class="fa-solid fa-peso-sign"></i></span>
+                <input type="number" class="form-control p-3 " id="needs" placeholder="Needs" readonly>
+              </div>
+                
             </div>
             <!-- The clear button for the fields-->
             <div class="row g-2 justify-content-center row-cols-1 my-2">
@@ -375,14 +408,19 @@
       <!-- internal js feel free to move to another external script-->
       <script>
         //set up block
+        
         const data ={
           labels: ["Emergency", "Savings", "Needs", "Wants"],
+     
                datasets: [{
                 label: "online tutorial subjects",
                 data: [10, 45, 25, 20],
-                backgroundColor: ['lightgray', 'black', 'gray', 'darkgrey', ],
-                hoverOffset: 5
+                backgroundColor: ['lightblue', 'darkblue', 'blue', 'white', ],
+                hoverOffset: 5,
+                
+                
                }],
+
             };
 
         //config block 
@@ -391,6 +429,7 @@
             data,
             options: {
                responsive: true,
+              
             }
 
         }
@@ -402,7 +441,7 @@
         )
 
         //js funct
-     
+   
 
         const emergency = document.getElementById('emergency_value')
         const savings = document.getElementById('savings_value')
@@ -434,6 +473,7 @@
 
       </script>
     </div>
+     </div>
   
   <script src="./particlejs/particles.js"></script>
   <script src="./particlejs/app.js"></script>
