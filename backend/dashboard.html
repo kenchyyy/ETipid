@@ -82,7 +82,7 @@
                 <!-- Button trigger modal -->
                     <div class="row px-3">
                         <button type="button" class="btn btn-primary p-5" data-bs-toggle="modal" data-bs-target="#Days">
-                            Days
+                            Days Active
                         </button>
                     </div>
         
@@ -91,42 +91,46 @@
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Active Days</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <h4 class="display-6 tt"  data-bs-placement="right" title="Show per week allocation"><i class="fa-solid fa-sun"></i> &nbsp;Days Active</h4>
+                              <div class="row row-cols-1 align-content-center justify-content-center">
+                              <div class="col-10 p-3 cont3 ">
+                                <h6 class="display-6 tt"  data-bs-placement="right" title="Show per week allocation"><i class="fa-solid fa-sun"></i> &nbsp;Days Active</h6>
                                 <form id="days-act-inact">
-                                <div class="form-check form-switch">
-                                    <label for="monday-tog" class="form-check-label">Monday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="monday-tog" class="form-check-label"><h6>Monday</h6></label>
                                     <input type="checkbox" id="monday-tog" class="form-check-input">
                                 </div>
                                 
-                                <div class="form-check form-switch">
-                                    <label for="tuesday-tog" class="form-check-label">Tuesday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="tuesday-tog" class="form-check-label"><h6>Tuesday</h6></label>
                                     <input type="checkbox" id="tuesday-tog" class="form-check-input">
                                 </div>
-                                <div class="form-check form-switch">
-                                    <label for="wednesday-tog" class="form-check-label">Wednesday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="wednesday-tog" class="form-check-label"><h6>Wednesday</h6></label>
                                     <input type="checkbox" id="wednesday-tog" class="form-check-input">
                                 </div>
-                                <div class="form-check form-switch">
-                                    <label for="thursday-tog" class="form-check-label">Thursday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="thursday-tog" class="form-check-label"><h6>Thursday</h6></label>
                                     <input type="checkbox" id="thursday-tog" class="form-check-input">
                                 </div>
-                                <div class="form-check form-switch">
-                                    <label for="friday-tog" class="form-check-label">Friday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="friday-tog" class="form-check-label"><h6>Friday</h6></label>
                                     <input type="checkbox" id="friday-tog" class="form-check-input">
                                 </div>
-                                <div class="form-check form-switch">
-                                    <label for="saturday-tog" class="form-check-label">Saturday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="saturday-tog" class="form-check-label"><h6>Saturday</h6></label>
                                     <input type="checkbox" id="saturday-tog" class="form-check-input">
                                 </div>
-                                <div class="form-check form-switch">
-                                    <label for="sunday-tog" class="form-check-label">Sunday</label>
+                                <div class="form-check form-switch m-3">
+                                    <label for="sunday-tog" class="form-check-label"><h6>Sunday</h6></label>
                                     <input type="checkbox" id="sunday-tog" class="form-check-input">
                                 </div>
                             </form>
+                        </div>
+                      </div>
                         </div>
                     </div>
                 </div>
@@ -135,7 +139,7 @@
                     <!-- Button trigger modal -->
                     <div class="row px-3">
                         <button type="button" class="btn btn-primary g-4 p-5" data-bs-toggle="modal" data-bs-target="#Inputs">
-                            Inputs
+                            Allocation Settings
                         </button>
                     </div>
                     
@@ -144,13 +148,13 @@
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Change Input</h1>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
                               
                               <!-- Amount-->
-                                      <div class="col-12-sm-4 p-3 cont3 mt-5">
+                                      <div class="col-12-sm-4 p-3 cont3">
                                         <h6 class='display-6 tt' data-bs-placement="right" title="Total Budget Amount"> <i class="fas fa-cog"></i> &nbsp;Amount</h6>
                                         <div class="input-group mb-3 ">
                                           <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-peso-sign"></i></span>

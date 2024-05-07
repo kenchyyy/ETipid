@@ -6,6 +6,10 @@ h6, .navv, .btn, .toast-header {
   
   }
 
+  .modal {
+    border-radius: 50px;
+  }
+
   #chartId{
     color: black;
   }
