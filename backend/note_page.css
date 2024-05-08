@@ -5,10 +5,15 @@ h4,h6, .btn, #chartId, .toast-header , h1{
     color: aliceblue;
 }
 
-.offcanvas-title, .display-6{
+.offcanvas-title, .disp {
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
-    color: #222;
+    color:#222;
+}
+.display-6{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    color: #FFFFFF; 
 }
 
 .navv {
