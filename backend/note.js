@@ -8,15 +8,20 @@ function clicked(){
     let title = document.getElementById("title").value
     let cost = document.getElementById("cost").value
     let description = document.getElementById("description").value
-    console.log(title)
-    console.log(cost)
-    console.log(description)
-
-    let notes = localStorage.getItem("notes")
-    if (notes == null){
-        notesObj = []
-    } else{
-        notesObj = JSON.parse(notes)
+    if(title.length == 0 || cost.length == 0 ){
+        
+    }
+    else{
+        console.log(title)
+        console.log(cost)
+        console.log(description)
+    
+        let notes = localStorage.getItem("notes")
+        if (notes == null){
+            notesObj = []
+        } else{
+            notesObj = JSON.parse(notes)
+        }}
     }
 
     // note object
