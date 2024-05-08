@@ -1,9 +1,20 @@
-h6, .navv, .btn{
+h6, .btn{
     /* font-family: "Livvic", sans-serif; */
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
     color: aliceblue;
   
+  }
+
+  .navv {
+    background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    border-radius: 50px;
+  }
+
+  .nav-link {
+    color: aliceblue;
   }
 
   .modal {
@@ -46,7 +57,7 @@ h6, .navv, .btn{
     height: 2px;
     width: 100%;
     transition: 0.3s;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: #222;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -129,7 +140,8 @@ h6, .navv, .btn{
      --grad7: rgb(228, 228, 228);
   }
   .cont1, .cont4, .dvcenter {
-    background: linear-gradient(to top, rgb(68, 129, 235) 0%, rgb(4, 190, 254) 100%);
+    /* background: linear-gradient(to top, rgb(68, 129, 235) 0%, rgb(4, 190, 254) 100%); */
+    background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
     border: 1px solid rgba(255, 247, 247,0.18);
@@ -147,7 +159,8 @@ h6, .navv, .btn{
   
   
   .cont3 {
-    background: linear-gradient(to top, rgb(68, 129, 235) 0%, rgb(4, 190, 254) 100%);
+    /* background: linear-gradient(to top, rgb(68, 129, 235) 0%, rgb(4, 190, 254) 100%); */
+    background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);;
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
     backdrop-filter: blur(10px);

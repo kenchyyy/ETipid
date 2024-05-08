@@ -1,33 +1,43 @@
-h4,h6, .navv, .btn, #chartId, .toast-header, .offcanvas-title , h1{
+h4,h6, .btn, #chartId, .toast-header , h1{
     /* font-family: "Livvic", sans-serif; */
     font-family: "Orbitron", sans-serif;
-    font-size: 1rem; }
-
-
-.container {
-    background-color: rgba(243, 243, 243 ,0.5);
-    border-radius: 10px;
+    font-size: 1rem;
+    color: aliceblue;
 }
+
+.offcanvas-title, .display-6{
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    color: #222;
+}
+
+.navv {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    background-image: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
+    border-radius: 50px;
+}
+
 input{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.5) ;
 }
 .card{
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.2),  rgba(255, 255, 255,0));
+    background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 247, 247,0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.5);
 
-.del:hover {
+}
+/* .del:hover {
     background-color: aliceblue;
     color: #000;
     border: none;
-}
+} */
 
 
-}
 .nav-link {
     text-decoration: none;
     transition: 0.3s;
@@ -40,7 +50,7 @@ input{
     height: 2px;
     width: 100%;
     transition: 0.3s;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: #222;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -103,12 +113,12 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.2);
     }
 }
 
-.btn-outline-secondary:hover {
+.btn-primary:hover {
     box-shadow: 0 0 10px rgb(0, 0, 0);
 }
 
 :root{
-    --grad1 : black;
+    --grad1 :white;
     --grad2: darkgray;
     --grad3: rgb(56, 58, 63);
     --grad4: rgb(128, 101, 101);
@@ -118,20 +128,22 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.2);
 }
 
 body{
+    /* background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
+    background-size: 300% 300%;
+    animation: color 12s ease-in-out infinite; */
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg, var(--grad1), var(--grad2), var(--grad3), var(--grad4));
-    background-size: 300% 300%;
-    animation: color 12s ease-in-out infinite;
+    background: url(./pictures/5156620.jpg);
 }
 
 
 .cont1 {
-    background: linear-gradient(135deg, rgba(255, 255, 255,0.1),  rgba(255, 255, 255,0));
+    background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
     background-size: 300% 300%;
     animation: color 12s ease-in-out infinite;
     border: 1px solid rgba(255, 247, 247,0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.37);
+    border-radius: 50px;
  }
 
 @keyframes color{

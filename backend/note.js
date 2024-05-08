@@ -51,7 +51,7 @@ function showNotes(){
              <div class="card-body text-dark">
              <p class="card-text"> ${element.description}
              </p>
-             <button class="btn  btn-outline-secondary del" id="${index}" onclick ="deleteNote(${this.id})"> <i class="fa-solid fa-trash-can"></i> </button>
+             <button class="btn  btn-outline-light del" id="${index}" onclick ="deleteNote(${this.id})"> <i class="fa-solid fa-trash-can"></i> </button>
         </div>
 </div>
          `
