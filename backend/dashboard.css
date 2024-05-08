@@ -1,4 +1,4 @@
-h6, .navv, .btn, .toast-header {
+h6, .navv, .btn{
     /* font-family: "Livvic", sans-serif; */
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
@@ -13,7 +13,11 @@ h6, .navv, .btn, .toast-header {
   #chartId{
     color: black;
   }
-
+  .toast-header {
+    color:rgb(255, 255, 255);
+    background-color: rgb(4, 190, 254);
+  }
+  
   .img-fluid {
     width: 5rem;
     height: auto;
