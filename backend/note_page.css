@@ -1,14 +1,32 @@
-h4,h6, .btn, #chartId, .toast-header , h1{
+h4,h6, .btn, h1{
     /* font-family: "Livvic", sans-serif; */
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
     color: aliceblue;
 }
 
-.offcanvas-title, .disp {
+.modal {
+    border-radius: 50px;
+  }
+
+  #button-off{
+    
+    background-color:rgb(10, 191, 247);
+    border:none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+  }
+ 
+  .toast-header {
+    color:rgb(255, 255, 255);
+    background-color: rgb(4, 190, 254);
+  }
+
+  .card-header, .disp {
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
-    color:#222;
+    color:#ffffff;
 }
 .display-6{
     font-family: "Orbitron", sans-serif;
@@ -22,10 +40,13 @@ h4,h6, .btn, #chartId, .toast-header , h1{
     background-image: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
     border-radius: 50px;
 }
-
+.offcanvas-header{
+    background:  linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
+}
 input{
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.5) ;
 }
+
 .card{
     background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);
     background-size: 300% 300%;
@@ -85,7 +106,7 @@ box-shadow: 0 8px 32px 0 rgba(0, 0, 0,0.2);
     transform: scale(1.05);
 }
 
-.fa-shopping-cart:hover, .fa-magnifying-glass:hover {
+.fa-sticky-note:hover, .fa-magnifying-glass:hover {
     animation: animation 0.5s linear;
     color: aliceblue;
 }

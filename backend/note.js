@@ -9,7 +9,9 @@ function clicked(){
     let cost = document.getElementById("cost").value
     let description = document.getElementById("description").value
     if(title.length == 0 || cost.length == 0 ){
-        
+        const toastContent = document.getElementById("empty-title")
+        const toast = new  bootstrap.Toast(toastContent)
+        toast.show()
     }
     else{
         console.log(title)
@@ -57,7 +59,7 @@ function showNotes(){
     notesObj.forEach(function(element, index){
         cardGroup += `
         <div class="card border-light mb-3 m-3" style="max-width: 18rem;">
-             <div class="card-header"><i class="fa-solid fa-peso-sign"></i>${element.cost}  <b>${element.title}</b></div>
+             <div class="card-header"><i class="fa-solid fa-peso-sign"></i>${element.cost} &nbsp; &nbsp; &nbsp;  <b>${element.title}</b></div>
              <div class="card-body text-dark">
              <p class="card-text"> ${element.description}
              </p>
@@ -72,7 +74,7 @@ function showNotes(){
         notesContainer.innerHTML = cardGroup
     }
     else{
-        notesContainer.innerHTML = ` <b>No notes to show!</b><i class="fa-solid fa-face-sad-cry"></i> `
+        notesContainer.innerHTML = ` <b>No pinned items to show!</b><i class="fa-solid fa-face-sad-cry"></i> `
     }
 }
 
