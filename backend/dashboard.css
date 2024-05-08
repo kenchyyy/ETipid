@@ -136,9 +136,8 @@ h6, .navv, .btn, .toast-header {
   
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg, var(--grad7));
-    background-size: 300% 300%;
-    animation: color 12s ease-in-out infinite;
+    background: url(./pictures/5156620.jpg);
+    
   
   }
   
