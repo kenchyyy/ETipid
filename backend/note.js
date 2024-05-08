@@ -21,17 +21,22 @@ function clicked(){
             notesObj = []
         } else{
             notesObj = JSON.parse(notes)
-        }}
+        }
+
+        // note object
+    
+        note = {"title": title, "cost": cost, "description": description}
+        notesObj.push(note)
+    
+        //setting in localStorage
+        localStorage.setItem("notes", JSON.stringify(notesObj))
+        showNotes()
+
+        document.getElementById("title").value = ""
+        document.getElementById("cost").value = ""
+        document.getElementById("description").value = ""
+    
     }
-
-    // note object
-
-    note = {"title": title, "cost": cost, "description": description}
-    notesObj.push(note)
-
-    //setting in localStorage
-    localStorage.setItem("notes", JSON.stringify(notesObj))
-    showNotes()
 
 }
 )
