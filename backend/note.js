@@ -8,25 +8,35 @@ function clicked(){
     let title = document.getElementById("title").value
     let cost = document.getElementById("cost").value
     let description = document.getElementById("description").value
-    console.log(title)
-    console.log(cost)
-    console.log(description)
-
-    let notes = localStorage.getItem("notes")
-    if (notes == null){
-        notesObj = []
-    } else{
-        notesObj = JSON.parse(notes)
+    if(title.length == 0 || cost.length == 0 ){
+        
     }
+    else{
+        console.log(title)
+        console.log(cost)
+        console.log(description)
+    
+        let notes = localStorage.getItem("notes")
+        if (notes == null){
+            notesObj = []
+        } else{
+            notesObj = JSON.parse(notes)
+        }
 
-    // note object
+        // note object
+    
+        note = {"title": title, "cost": cost, "description": description}
+        notesObj.push(note)
+    
+        //setting in localStorage
+        localStorage.setItem("notes", JSON.stringify(notesObj))
+        showNotes()
 
-    note = {"title": title, "cost": cost, "description": description}
-    notesObj.push(note)
-
-    //setting in localStorage
-    localStorage.setItem("notes", JSON.stringify(notesObj))
-    showNotes()
+        document.getElementById("title").value = ""
+        document.getElementById("cost").value = ""
+        document.getElementById("description").value = ""
+    
+    }
 
 }
 )
