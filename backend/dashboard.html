@@ -95,7 +95,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Active Days</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="Submit()"></button>
                             </div>
                             <div class="modal-body">
                               <div class="row row-cols-1 align-content-center justify-content-center">
@@ -152,7 +152,7 @@
                         <div class="modal-content">
                             <div class="modal-header">
                             <h1 class="modal-title fs-5" id="exampleModalLabel">Change Input</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="updateChart(); Submit()"></button>
                             </div>
                             <div class="modal-body">
                               
@@ -198,15 +198,6 @@
                                             <span class="input-group-text"><i class="fas fa-percent"></i></span>
                                             </div>
                                         </div>
-                                        
-                                        
-                                            <!-- Update button-->
-                                            <div class="row g-2 justify-content-center row-cols-1 my-2">
-                                                <button id="update_but" class="btn btn-outline-light btn-lg btn-block tt" data-bs-placement="top" title="Update the Output values" onclick="updateChart(); Submit()">
-                                                    Update
-                                                </button>
-                                            </div>
-                                   
                                 </div>
                             </div>
                     </div>
@@ -312,10 +303,10 @@
             
             <!-- toggle switch for radios-->
             <h6 class='display-6'> <i class="fas fa-cog"></i> &nbsp;Output</h6>
-            <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per week allocation" name="options" id="week" autocomplete="off" checked>
+            <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per week allocation" name="options" id="week" autocomplete="off" onclick="Submit()" checked>
             <label class="btn btn-outline-light p-3" for="week">Week</label>
 
-            <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per day allocation" name="options" id="day" autocomplete="off">
+            <input type="radio" class="btn-check tt" data-bs-placement="top" title="Show per day allocation" name="options" id="day" autocomplete="off" onclick="Submit()">
             <label class="btn btn-outline-light p-3" for="day">Day</label>
             
             <div class="my-3">
@@ -415,6 +406,21 @@
 
       <!-- internal js feel free to move to another external script-->
       <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+          const ModalOverlayInput = document.getElementById("Inputs")
+          const ModalOverlayDays = document.getElementById("Days")
+          ModalOverlayInput.addEventListener('click', (event) => {
+            if (event.target === ModalOverlayInput){
+              Submit()
+              updateChart()
+            }})
+          ModalOverlayDays.addEventListener('click', (event) => {
+            if (event.target === ModalOverlayDays){
+              Submit()
+            }})
+        })
+
         //set up block
         
         const data ={
