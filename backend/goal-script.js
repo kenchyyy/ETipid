@@ -15,6 +15,12 @@ todoList.addEventListener("click", deleteCheck);
 
 function addTodo(event) {
     event.preventDefault();
+    if (todoInput.value.length == 0) {
+    const toastContent = document.getElementById("empty-goal");
+    const toast = new bootstrap.Toast(toastContent);
+    toast.show();
+    return;
+    }
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo");
     const newTodo = document.createElement("li");
