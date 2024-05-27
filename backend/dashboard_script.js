@@ -230,19 +230,19 @@ function handle_negative_input(arraguy){
 
 function calculate_days_goal(read_data){
  
-  var savingsweek = parseInt(compute_need_per_week(read_data))
+  var savingsweek = parseInt(compute_savings_per_week(read_data))
   
   var goal_amount = parseInt(document.getElementById('goals_num').value)
   if (savingsweek != 0){
 
-  var days_left = (goal_amount / savingsweek) * 7
-  var min_left = (goal_amount /savingsweek) * 10080
-  var sec_left = (goal_amount / savingsweek) * 604800
+  var days_left = ((goal_amount / savingsweek) * 7).toFixed(0)
+  var weeks_left = (goal_amount /savingsweek).toFixed(0)
+  var months_left = ((goal_amount / savingsweek) / 4).toFixed(1)
  
 
   document.getElementById('modal_days').value = days_left.toString()
-  document.getElementById('modal_min').value = min_left.toString()
-  document.getElementById('modal_sec').value = sec_left.toString()
+  document.getElementById('modal_weeks').value = weeks_left.toString()
+  document.getElementById('modal_months').value = months_left.toString()
 } else{
 
   const toastContent = document.getElementById("savings_not_zero")
