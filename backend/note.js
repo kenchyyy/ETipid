@@ -1,13 +1,20 @@
 
 
 showNotes()
+//this is always invoked during the loading time so it shows the notes
+//already previously set
 const addNotebtn = document.getElementById("addNote")
 
+//handles what will happens when you click the add 'btn'
 addNotebtn.addEventListener('click',
 function clicked(){
     let title = document.getElementById("title").value
     let cost = document.getElementById("cost").value
     let description = document.getElementById("description").value
+    //handles the title and length. 
+    // you cannot add a note with empty title or cost it will show a 
+    //toast error
+
     if(title.length == 0 || cost.length == 0 ){
         const toastContent = document.getElementById("empty-title")
         const toast = new  bootstrap.Toast(toastContent)
@@ -23,6 +30,8 @@ function clicked(){
             notesObj = []
         } else{
             notesObj = JSON.parse(notes)
+            //parse just transforms the strings to values to be used
+            // it's the opposite of JSON.stringify ig lollll
         }
 
         // note object
@@ -55,6 +64,8 @@ function showNotes(){
     
     let cardGroup= ""
     //Retrieving dat and create notes
+    // you can create divs or elements in HTML DOM
+    // just using the class to edit the template appearance in CSS
 
     notesObj.forEach(function(element, index){
         cardGroup += `
@@ -68,6 +79,10 @@ function showNotes(){
 </div>
          `
     })
+
+    //notescontainer is that one empty div sa dalum
+    // though it's not empty because when u have values in your localStorage
+    // it creates note elements ;w;
 
     let notesContainer = document.getElementById("notesContainer")
     if(notesObj.length != 0){

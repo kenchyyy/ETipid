@@ -103,6 +103,7 @@
         <button class="btn btn-outline-light tt" type="button" data-bs-placement="top" title="Open Etipid's To do list!" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><i class="fa-solid fa-trophy"></i>&nbsp;To Do Goal Tracker</button>
 
         <!-- OFF CANVAS-->
+        <!-- Heavily associated with goal-script.js-->
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
   <div class="offcanvas-header">
     <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Goal To Do!</h5>
@@ -135,6 +136,7 @@
           <p class="muted"> Search for Items</p>
 
           <!--SEARCH-->
+          <!--Heavily related with note.js and the internal script search js ig-->
           <div class="input-group mb-3">
             <button class="btn btn-outline-light" type="button" id="button-addon1"><i class="fa-solid fa-magnifying-glass"></i></button>
             <input type="text" class="form-control tt" placeholder="" aria-label="Example text with button addon" aria-describedby="button-addon1" id="card_search" data-bs-placement="right" title="Search for items!" >
@@ -146,7 +148,7 @@
       </div>
     </div>
 
-    <!-- MY LOVELY TOASTS AGAIN ACKKKK!-->
+    <!-- MY LOVELY TOASTS AGAIN ACKKKK! :3 :33333-->
     <!--It must have a title and a cost!-->
     <div class="tost-container position-fixed bottom-0 end-0 p-3" >
       <div class="toast text-bg-light " role="alert" aria-live="assertive" aria-atomic="true" id="empty-title">
@@ -184,6 +186,12 @@
 <!-- Script for the SEARCH BAR-->
 <script>
   const card_search = document.getElementById('card_search')
+  // this just looks for the input bar tbh then i added an eventlistener
+  // it's just to track the inputted values each time and updates real time
+  // so then i just looked at all the div.card-header and for it i converted it to lowercase
+  // if the value of it includes something i searched in the search bar
+  // it just shows it by putting 'block' if not then the display 'none'
+  
   card_search.addEventListener('keyup', e =>{
     let currentValue = e.target.value.toLowerCase()
     let cards = document.querySelectorAll('div.card-header')
