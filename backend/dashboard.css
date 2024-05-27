@@ -1,3 +1,4 @@
+
 h6, .btn, .modal-content{
     /* font-family: "Livvic", sans-serif; */
     font-family: "Orbitron", sans-serif;
@@ -5,7 +6,7 @@ h6, .btn, .modal-content{
     color: aliceblue;
   
   }
-
+/* Reg - edit of the nav-link and nav-link .active */
   .nav-link{
     font-family: "Orbitron", sans-serif;
     font-size: 1rem;
@@ -19,6 +20,7 @@ h6, .btn, .modal-content{
       color: rgb(0, 0, 0);
     }
   }
+  /* Reg - edit of the nav-link and nav-link .active */
 
   .navv {
     background: linear-gradient(-20deg, rgb(183, 33, 255) 0%, rgb(33, 212, 253) 100%);;
