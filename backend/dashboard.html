@@ -407,6 +407,8 @@
       <!-- internal js feel free to move to another external script-->
       <script>
 
+        /* To handle a case when the user decides to close the "Input" modal and the "Days" modal by clicking outside the modal.
+        Automatically updates the data for user convinience*/
         document.addEventListener('DOMContentLoaded', (event) => {
           const ModalOverlayInput = document.getElementById("Inputs")
           const ModalOverlayDays = document.getElementById("Days")
