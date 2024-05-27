@@ -177,7 +177,7 @@ function compute_emergency(read_data, actday){
 
 
 
-
+// functions for computing the budget allocations per week
 
 function compute_need_per_week(read_data){
 
@@ -227,7 +227,7 @@ function handle_negative_input(arraguy){
 
 
 
-
+// function for calculating the progress
 function calculate_days_goal(read_data){
  
   var savingsweek = parseInt(compute_savings_per_week(read_data))
