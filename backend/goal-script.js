@@ -15,6 +15,8 @@ todoList.addEventListener("click", deleteCheck);
 
 function addTodo(event) {
     event.preventDefault();
+
+    //reg - fixed this one with an if statement that if there is no input it shall raise an error warning and will not infinitely add to the to do list.
     if (todoInput.value.length == 0) {
     const toastContent = document.getElementById("empty-goal");
     const toast = new bootstrap.Toast(toastContent);
